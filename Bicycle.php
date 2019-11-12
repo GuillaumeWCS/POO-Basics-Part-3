@@ -2,8 +2,9 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
-class Bicycle extends Vehicle
+class Bicycle extends Vehicle implements LightableInterface
 {
     protected $color;
     protected $bagage;
@@ -43,6 +44,19 @@ class Bicycle extends Vehicle
         }
         $sentence .= "I'm stopped !";
         return $sentence;
+    }
+
+    public function switchOn()
+    {
+        if ($this->currentSpeed > 10)
+            return true;
+        else
+            return false;
+    }
+
+    public function switchOff()
+    {
+        return false;
     }
 
 }

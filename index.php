@@ -18,9 +18,10 @@ $car = new Car('green', 4, 'electric');
 $truck = new Truck('blue', 3, 'fuel', 50, 30);
 $truck2 = new Truck('green', 2, 'electric', 25, 10);
 
-$tesla = new Car('black', 4);
+$tesla = new Car('black', 4, 'electric');
 $ferrari = new Car('red', 2);
 $skate = new Skateboard('brown', 1);
+$bike = new Bicycle('brown', 2, "oui");
 
 echo "<br>";
 echo "___________________";
@@ -34,8 +35,24 @@ $roadCar->addVehicle($ferrari);
 $roadTruck->addVehicle($truck);
 $roadSkate->addVehicle($skate);
 
-var_dump($roadCar);
-var_dump($roadTruck);
-var_dump($skate);
+//var_dump($roadCar);
+//var_dump($roadTruck);
+//var_dump($skate);
+
+echo "<br>";
+
+echo "________tesla__________";
+var_dump($tesla);
+echo $tesla->switchOff(); // return false
+
+echo "________bike__________";
+$bike->setCurrentSpeed(12);
+var_dump($bike);
+echo $bike->switchOn(); // return true
+
+/*
+$bike->setCurrentSpeed(12);
+var_dump($bike);
+*/
 
 
