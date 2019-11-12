@@ -50,9 +50,4 @@ $bike->setCurrentSpeed(12);
 var_dump($bike);
 echo $bike->switchOn(); // return true
 
-/*
-$bike->setCurrentSpeed(12);
-var_dump($bike);
-*/
-
 
